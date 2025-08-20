@@ -1,25 +1,26 @@
-# 🚀 Netlify Deployment Guide - ACE BIT Sindri
+# 🚀 Netlify Deployment Guide for ACE BITS
 
 ## 📋 Prerequisites
-- GitHub repository connected
-- Netlify account
-- Node.js 20.11.0
 
-## ⚙️ Build Settings
+- GitHub repository connected to Netlify
+- Node.js 20.11.0 support
+- NPM 10.2.4 support
 
-### Build Command:
+## ⚙️ Netlify Build Settings
+
+### Build Command
 ```bash
-chmod +x netlify-build.sh && ./netlify-build.sh
+npm ci --legacy-peer-deps && npm run build
 ```
 
-### Publish Directory:
+### Publish Directory
 ```
 build
 ```
 
-### Node.js Version:
+### Base Directory
 ```
-20.11.0
+(leave empty)
 ```
 
 ## 🔧 Environment Variables
@@ -27,70 +28,151 @@ build
 | Variable | Value | Description |
 |----------|-------|-------------|
 | `NODE_VERSION` | `20.11.0` | Node.js version |
-| `NPM_VERSION` | `10.2.4` | npm version |
-| `CI` | `false` | Disable CI checks |
+| `NPM_VERSION` | `10.2.4` | NPM version |
+| `CI` | `false` | Disable CI mode |
 | `SKIP_PREFLIGHT_CHECK` | `true` | Skip preflight checks |
+| `NPM_FLAGS` | `--legacy-peer-deps` | NPM installation flags |
 
-## 📁 Required Files
+## 📁 File Structure
 
-### 1. `netlify.toml`
-- Build configuration
-- Redirects for SPA routing
-- Security headers
-- Cache settings
+```
+acebit-main/
+├── netlify.toml          # Netlify configuration
+├── .nvmrc               # Node.js version
+├── package.json         # Dependencies and scripts
+├── netlify-build.sh     # Complex build script (optional)
+└── netlify-build-simple.sh # Simple build script (backup)
+```
 
-### 2. `public/_redirects`
-- SPA routing support
-- All routes redirect to index.html
+## 🚀 Deployment Process
 
-### 3. `.nvmrc`
-- Node.js version specification
+### 1. Automatic Deployment
+- Push to `main` branch
+- Netlify automatically triggers build
+- Build output deployed to CDN
 
-### 4. `.npmrc`
-- Legacy peer deps enabled
-- Strict peer deps disabled
-
-### 5. `netlify-build.sh`
-- Custom build script
-- Dependency installation
-- TypeScript setup
-
-## 🚀 Deployment Steps
-
-### Option 1: Netlify CLI
+### 2. Manual Deployment
 ```bash
-# Install CLI
-npm install -g netlify-cli
+# Build locally
+npm run build
 
-# Login
-netlify login
-
-# Deploy
+# Deploy to Netlify
 netlify deploy --prod --dir=build
 ```
 
-### Option 2: Netlify Dashboard
-1. Go to [netlify.com](https://netlify.com)
-2. Click "New site from Git"
-3. Connect GitHub repository
-4. Set build settings
-5. Deploy
+### 3. Build Commands
+
+#### Primary Build Command
+```bash
+npm ci --legacy-peer-deps && npm run build
+```
+
+#### Alternative Build Commands
+```bash
+# Using package.json script
+npm run build:netlify
+
+# Using build script
+chmod +x netlify-build-simple.sh && ./netlify-build-simple.sh
+```
 
 ## 🔍 Troubleshooting
 
-### Common Issues:
-1. **Peer Dependency Conflicts** ✅ Fixed with `.npmrc`
-2. **TypeScript Module Not Found** ✅ Fixed with build script
-3. **React Router Not Working** ✅ Fixed with `_redirects`
-4. **Node.js Version Issues** ✅ Fixed with `.nvmrc`
+### Build Failures
 
-### Build Logs:
-- Check Netlify build logs for errors
-- Verify all environment variables are set
-- Ensure all required files are present
+#### Error: "netlify-build.sh: No such file or directory"
+**Solution:** Use direct npm commands instead of build script
+
+#### Error: "Dependencies installation failed"
+**Solution:** Ensure `--legacy-peer-deps` flag is used
+
+#### Error: "Node version mismatch"
+**Solution:** Verify `.nvmrc` file contains `20.11.0`
+
+### Performance Issues
+
+#### Slow Builds
+- Clear npm cache: `npm cache clean --force`
+- Use `npm ci` instead of `npm install`
+- Enable build caching in Netlify
+
+#### Large Bundle Size
+- Enable code splitting
+- Optimize images
+- Use dynamic imports
+
+## 📱 Build Output
+
+### Expected Build Directory
+```
+build/
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── media/
+├── index.html
+└── asset-manifest.json
+```
+
+### Build Verification
+```bash
+# Check build output
+ls -la build/
+
+# Verify static assets
+ls -la build/static/
+```
+
+## 🌐 Domain Configuration
+
+### Primary Domain
+- **Netlify subdomain:** `acebits.netlify.app`
+- **Custom domain:** Configure as needed
+
+### HTTPS Settings
+- **Force HTTPS:** Enabled
+- **TLS certificate:** Automatic
+
+## 📊 Monitoring
+
+### Build Logs
+- Check Netlify dashboard for build logs
+- Monitor build time and success rate
+- Set up build notifications
+
+### Performance Metrics
+- Core Web Vitals
+- Lighthouse scores
+- Page load times
+
+## 🔄 Continuous Deployment
+
+### GitHub Integration
+1. Connect GitHub repository
+2. Set build settings
+3. Configure branch deployment
+4. Enable automatic builds
+
+### Branch Deployments
+- **Main branch:** Production deployment
+- **Feature branches:** Preview deployments
+- **Pull requests:** Automatic preview builds
 
 ## 📞 Support
-For deployment issues, check:
-- Netlify build logs
-- GitHub repository status
-- Environment variable configuration
+
+### Common Issues
+- Build script not found
+- Dependency conflicts
+- Node.js version issues
+- Build timeout errors
+
+### Resources
+- [Netlify Documentation](https://docs.netlify.com/)
+- [Build Configuration](https://docs.netlify.com/configure-builds/overview/)
+- [Deploy Settings](https://docs.netlify.com/site-deploys/overview/)
+
+---
+
+**Last Updated:** 21-08-2025  
+**Version:** 1.0.0  
+**Status:** ✅ Ready for Deployment

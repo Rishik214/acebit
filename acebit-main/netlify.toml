@@ -1,5 +1,5 @@
 [build]
-  command = "chmod +x netlify-build.sh && ./netlify-build.sh"
+  command = "npm ci --legacy-peer-deps && npm run build"
   publish = "build"
   functions = "netlify/functions"
 
@@ -8,6 +8,7 @@
   NPM_VERSION = "10.2.4"
   CI = "false"
   SKIP_PREFLIGHT_CHECK = "true"
+  NPM_FLAGS = "--legacy-peer-deps"
 
 [[redirects]]
   from = "/*"
