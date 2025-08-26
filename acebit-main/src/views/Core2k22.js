@@ -359,7 +359,7 @@ const Core2k22 = () => {
           <div className="text-center text-white">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2" />
-              Core Team 2022-2023
+              2K22 Team 2022-2023
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold font-heading mb-6">
@@ -442,7 +442,7 @@ const Core2k22 = () => {
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                        Core Team
+                        2K22 Team
                       </div>
                     </div>
                   </div>

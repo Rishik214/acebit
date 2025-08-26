@@ -49,7 +49,7 @@ const HeroSection = () => {
       </video>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 via-purple-900/45 to-indigo-900/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 via-blue-800/30 to-indigo-900/50"></div>
 
       {/* Content */}
       <div className="relative z-10 flex items-start md:items-center justify-center min-h-[56vh] md:min-h-screen">
@@ -59,7 +59,7 @@ const HeroSection = () => {
             <Col lg={8} className="text-center text-white">
               <div className="animate-fade-in">
                 {/* Badge */}
-                <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-xs sm:text-sm font-medium mb-2 animate-slide-up">
+                <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full text-xs sm:text-sm font-medium mb-2 animate-slide-up">
                   <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
                   Premier Civil Engineering Association
                 </div>
@@ -68,7 +68,7 @@ const HeroSection = () => {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading mb-3 md:mb-6 leading-tight animate-slide-up" style={{animationDelay: '0.2s'}}>
                   Welcome to
                   <span className="block">
-                    <span className="bg-gradient-to-r from-blue-300 via-indigo-200 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(59,130,246,0.25)]">
+                    <span className="bg-gradient-to-r from-blue-300 via-blue-200 to-indigo-300 bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(59,130,246,0.25)]">
                       {partOne.slice(0, partOneShownLength)}
                     </span>
                     <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(234,179,8,0.25)]">
@@ -91,12 +91,12 @@ const HeroSection = () => {
                   {features.map((feature, index) => (
                     <div
                       key={index}
-                      className="relative flex flex-col md:flex-row items-center justify-center text-center md:text-left md:justify-start space-y-2 md:space-y-0 md:space-x-3 p-2 md:p-3 rounded-xl backdrop-blur-sm border border-white/10 ring-1 ring-white/5 bg-gradient-to-b from-white/10 to-white/5 overflow-hidden transform-gpu will-change-transform hover:-translate-y-1 hover:scale-[1.01] transition-all duration-300"
+                      className="relative flex flex-col md:flex-row items-center justify-center text-center md:text-left md:justify-start space-y-2 md:space-y-0 md:space-x-3 p-2 md:p-3 rounded-xl backdrop-blur-sm border border-white/5 ring-1 ring-white/3 bg-gradient-to-b from-white/5 to-white/2 overflow-hidden transform-gpu will-change-transform hover:-translate-y-1 hover:scale-[1.01] transition-all duration-300"
                       style={{
                         boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.25), 0 12px 28px rgba(0,0,0,0.55)'
                       }}
                     >
-                      <span className="pointer-events-none absolute -top-6 -left-6 w-1/2 h-1/2 bg-white/10 blur-xl rounded-full opacity-70 md:opacity-40"></span>
+                      <span className="pointer-events-none absolute -top-6 -left-6 w-1/2 h-1/2 bg-white/5 blur-xl rounded-full opacity-50 md:opacity-25"></span>
                       
                       <feature.icon className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 mb-2" />
                       <div className="text-center">
@@ -126,7 +126,7 @@ const HeroSection = () => {
                     <span className="transition-all duration-300">Join Our Community</span>
                     
                     {/* Enhanced Hover Effects */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 scale-0 group-hover:scale-100"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 scale-0 group-hover:scale-100"></div>
                     
                     {/* Border Glow Effect */}
                     <div className="absolute inset-0 border-2 border-white/50 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 scale-95 group-hover:scale-100"></div>
@@ -139,8 +139,8 @@ const HeroSection = () => {
       </div>
 
       {/* Floating Elements */}
-      <div className="hidden md:block absolute top-20 right-20 w-32 h-32 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="hidden md:block absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+      <div className="hidden md:block absolute top-20 right-20 w-32 h-32 bg-gradient-to-r from-yellow-400/15 to-orange-500/15 rounded-full blur-3xl animate-pulse"></div>
+      <div className="hidden md:block absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-blue-400/15 to-indigo-500/15 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
     </div>
   );
 };

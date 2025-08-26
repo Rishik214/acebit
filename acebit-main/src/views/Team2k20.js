@@ -179,13 +179,13 @@ const Team2k20 = () => {
           <div className="text-center text-white">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2" />
-              Core Team 2020-2021
+              2K20 Team 2020-2021
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold font-heading mb-6">
               Meet Our
               <span className="block bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
-                Founding Team
+                2K20 Team
               </span>
             </h1>
             
@@ -262,7 +262,7 @@ const Team2k20 = () => {
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                        Founding Team
+                        2K20 Team
                       </div>
                     </div>
                   </div>
@@ -315,7 +315,7 @@ const Team2k20 = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The principles and values established by our founding team continue to guide us today
+              The principles and values established by our 2K20 team continue to guide us today
             </p>
           </div>
 

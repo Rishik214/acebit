@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { 
   Users, 
@@ -13,255 +13,337 @@ import {
   GraduationCap
 } from "lucide-react";
 
+// 2K23 team images - Using public folder paths with URL encoding
+const teamImages = {
+  aryan: "/images/2k23/Aryan.jpg",
+  jagriti: null, // Photo not available
+  tanvi: "/images/2k23/TANVI.jpg",
+  soumya: "/images/2k23/SOUMYA.jpg",
+  sumit: "/images/2k23/Sumit%20Sen.jpg",
+  ayush: "/images/2k23/ayush%20kumar.png",
+  animesh: "/images/2k23/Animesh%20Chatterjee%20.jpg",
+  harsh: "/images/2k23/harshkumar.jpg",
+  tisha: "/images/2k23/tisha%20khalkho.png",
+  rishav: "/images/2k23/rishav.jpeg",
+  shashi: "/images/2k23/shashi.png",
+  shreya: "/images/2k23/shreya.jpg",
+  rahul: null, // Photo not available
+  nitish: "/images/2k23/nitish%20kumar.jpg",
+  kaushal: "/images/2k23/Kaushal%20Kishore.jpg",
+  pratyush: null, // Photo not available
+  devroshan: "/images/2k23/devroshan.jpg",
+  suraj: "/images/2k23/Suraj%20Kumar%20.jpg",
+  renu: "/images/2k23/Renu.jpg",
+  aman: "/images/2k23/Aman.%20jpg",
+  deepika: "/images/2k23/Deepika.jpg",
+  sujit: null, // Photo not available
+  shivam: null, // Photo not available
+  shubham: "/images/2k23/subham.jpg",
+  kamlesh: "/images/2k23/kamlesh%20kumar%20sharma.jpg",
+  rishikesh: null, // Photo not available
+  anish: "/images/2k23/Anish_Kumar.jpg",
+  ahmad: "/images/2k23/ahmad.jpg",
+  amanArya: "/images/2k23/aman%20arya.jpg"
+};
+
 const Team2k23 = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openImageModal = (imageSrc, memberName) => {
+    setSelectedImage({ src: imageSrc, name: memberName });
+    setIsModalOpen(true);
+  };
+
+  const closeImageModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
+
+  // Close modal on Escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        closeImageModal();
+      }
+    };
+
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEscape);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [isModalOpen]);
+
   const teamData = [
-    {
-      name: "Rahul Kumar",
-      position: "President",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/rahul-kumar",
-      email: "rahul.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12371"
-    },
-    {
-      name: "Priya Sharma",
-      position: "Vice President",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/priya-sharma",
-      email: "priya.sharma@bitsindri.ac.in",
-      phone: "+91-94311-12372"
-    },
-    {
-      name: "Amit Singh",
-      position: "General Secretary",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/amit-singh",
-      email: "amit.singh@bitsindri.ac.in",
-      phone: "+91-94311-12373"
-    },
-    {
-      name: "Neha Patel",
-      position: "Joint Secretary",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/neha-patel",
-      email: "neha.patel@bitsindri.ac.in",
-      phone: "+91-94311-12374"
-    },
-    {
-      name: "Vikram Verma",
-      position: "Treasurer",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/vikram-verma",
-      email: "vikram.verma@bitsindri.ac.in",
-      phone: "+91-94311-12375"
-    },
-    {
-      name: "Anjali Gupta",
-      position: "Technical Head",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/anjali-gupta",
-      email: "anjali.gupta@bitsindri.ac.in",
-      phone: "+91-94311-12376"
-    },
-    {
-      name: "Rohit Das",
-      position: "Event Coordinator",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/rohit-das",
-      email: "rohit.das@bitsindri.ac.in",
-      phone: "+91-94311-12377"
-    },
-    {
-      name: "Sneha Reddy",
-      position: "Public Relations",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/sneha-reddy",
-      email: "sneha.reddy@bitsindri.ac.in",
-      phone: "+91-94311-12378"
-    },
-    {
-      name: "Arjun Mehta",
-      position: "Cultural Secretary",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/arjun-mehta",
-      email: "arjun.mehta@bitsindri.ac.in",
-      phone: "+91-94311-12379"
-    },
-    {
-      name: "Zara Khan",
-      position: "Academic Coordinator",
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/zara-khan",
-      email: "zara.khan@bitsindri.ac.in",
-      phone: "+91-94311-12380"
-    },
-    {
-      name: "Karan Malhotra",
-      position: "Social Media Manager",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/karan-malhotra",
-      email: "karan.malhotra@bitsindri.ac.in",
-      phone: "+91-94311-12381"
-    },
-    {
-      name: "Ishita Joshi",
-      position: "Content Writer",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/ishita-joshi",
-      email: "ishita.joshi@bitsindri.ac.in",
-      phone: "+91-94311-12382"
-    },
-    {
-      name: "Aditya Kumar",
-      position: "Research Coordinator",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/aditya-kumar",
-      email: "aditya.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12383"
-    },
-    {
-      name: "Pooja Singh",
-      position: "Innovation Head",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/pooja-singh",
-      email: "pooja.singh@bitsindri.ac.in",
-      phone: "+91-94311-12384"
-    },
-    {
-      name: "Rajesh Kumar",
-      position: "Project Coordinator",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/rajesh-kumar",
-      email: "rajesh.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12385"
-    },
-    {
-      name: "Meera Patel",
-      position: "Women Cell Head",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/meera-patel",
-      email: "meera.patel@bitsindri.ac.in",
-      phone: "+91-94311-12386"
-    },
-    {
-      name: "Saurabh Verma",
-      position: "Industry Connect",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/saurabh-verma",
-      email: "saurabh.verma@bitsindri.ac.in",
-      phone: "+91-94311-12387"
-    },
-    {
-      name: "Kavya Sharma",
-      position: "Alumni Coordinator",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/kavya-sharma",
-      email: "kavya.sharma@bitsindri.ac.in",
-      phone: "+91-94311-12388"
-    },
-    {
-      name: "Vivek Singh",
-      position: "Digital Marketing",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/vivek-singh",
-      email: "vivek.singh@bitsindri.ac.in",
-      phone: "+91-94311-12389"
-    },
-    {
-      name: "Tanvi Gupta",
-      position: "Quality Assurance",
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/tanvi-gupta",
-      email: "tanvi.gupta@bitsindri.ac.in",
-      phone: "+91-94311-12390"
-    },
-    {
-      name: "Rahul Das",
-      position: "Student Welfare",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/rahul-das",
-      email: "rahul.das@bitsindri.ac.in",
-      phone: "+91-94311-12391"
-    },
-    {
-      name: "Ananya Reddy",
-      position: "Infrastructure Head",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/ananya-reddy",
-      email: "ananya.reddy@bitsindri.ac.in",
-      phone: "+91-94311-12392"
-    },
-    {
-      name: "Pranav Kumar",
-      position: "Sports Coordinator",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/pranav-kumar",
-      email: "pranav.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12393"
-    },
-    {
-      name: "Shreya Joshi",
-      position: "Discipline Secretary",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/shreya-joshi",
-      email: "shreya.joshi@bitsindri.ac.in",
-      phone: "+91-94311-12394"
-    },
+    // FIRST ROW: Counselling, Operational, Development (Centre)
+    // COUNSELLING TEAM
     {
       name: "Aryan Singh",
-      position: "Technical Coordinator",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/aryan-singh",
+      position: "Counselling Team",
+      image: teamImages.aryan,
+      linkedin: "#",
       email: "aryan.singh@bitsindri.ac.in",
-      phone: "+91-94311-12395"
+      phone: "+91-XXXXXXXXXX"
     },
     {
-      name: "Diya Patel",
-      position: "Workshop Coordinator",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/diya-patel",
-      email: "diya.patel@bitsindri.ac.in",
-      phone: "+91-94311-12396"
+      name: "Jagriti Singh",
+      position: "Counselling Team",
+      image: null, // Photo not available
+      linkedin: "#",
+      email: "jagriti.singh@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
     },
     {
-      name: "Kartik Verma",
-      position: "Seminar Coordinator",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/kartik-verma",
-      email: "kartik.verma@bitsindri.ac.in",
-      phone: "+91-94311-12397"
+      name: "Tanvi Oraon",
+      position: "Counselling Team, Alumni Relations Team", // Multiple positions
+      image: teamImages.tanvi,
+      linkedin: "#",
+      email: "tanvi.oraon@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    // OPERATIONAL TEAM
+    {
+      name: "Soumya Kumari",
+      position: "Operational Team, Sponsorship Team", // Multiple positions
+      image: teamImages.soumya,
+      linkedin: "#",
+      email: "soumya.kumari@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
     },
     {
-      name: "Riya Sharma",
-      position: "Competition Head",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/riya-sharma",
-      email: "riya.sharma@bitsindri.ac.in",
-      phone: "+91-94311-12398"
+      name: "Sumit Sen",
+      position: "Operational Team, Editorial Team", // Multiple positions
+      image: teamImages.sumit,
+      linkedin: "#",
+      email: "sumit.sen@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
     },
     {
-      name: "Vedant Kumar",
-      position: "Exhibition Coordinator",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/vedant-kumar",
-      email: "vedant.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12399"
+      name: "Ayush Kumar Bhagat",
+      position: "Operational Team",
+      image: null, // Photo not available - Ayush Kumar Bhagat
+      linkedin: "#",
+      email: "ayush.bhagat@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    // DEVELOPMENT TEAM (Centre of first row)
+    {
+      name: "Kamlesh Kumar Sharma",
+      position: "Development Team",
+      image: teamImages.kamlesh, // Photo available now
+      linkedin: "#",
+      email: "kamlesh.sharma@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
     },
     {
-      name: "Aisha Khan",
-      position: "Community Service",
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/aisha-khan",
-      email: "aisha.khan@bitsindri.ac.in",
-      phone: "+91-94311-12400"
+      name: "Rishikesh Kumar",
+      position: "Development Team",
+      image: null, // Photo not available
+      linkedin: "#",
+      email: "rishikesh.kumar@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+
+    // SECOND ROW: Designing, Ideation, Sponsorship
+    // DESIGNING TEAM
+    {
+      name: "Tisha Khalkho",
+      position: "Designing Team",
+      image: teamImages.tisha,
+      linkedin: "#",
+      email: "tisha.khalkho@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
     },
     {
-      name: "Dhruv Singh",
-      position: "Outreach Coordinator",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/dhruv-singh",
-      email: "dhruv.singh@bitsindri.ac.in",
-      phone: "+91-94311-12401"
+      name: "Rishav Raj",
+      position: "Designing Team",
+      image: teamImages.rishav,
+      linkedin: "#",
+      email: "rishav.raj@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    {
+      name: "Shashi Kumar",
+      position: "Designing Team, Social Media Team", // Multiple positions
+      image: teamImages.shashi, // Photo available now
+      linkedin: "#",
+      email: "shashi.kumar@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    // IDEATION TEAM
+    {
+      name: "Shreya Keshri",
+      position: "Ideation Team",
+      image: teamImages.shreya,
+      linkedin: "#",
+      email: "shreya.keshri@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    {
+      name: "Rahul Kumar Saw",
+      position: "Ideation Team",
+      image: null, // Photo not available
+      linkedin: "#",
+      email: "rahul.saw@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    {
+      name: "Nitish Kumar",
+      position: "Ideation Team",
+      image: teamImages.nitish,
+      linkedin: "#",
+      email: "nitish.kumar@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    // SPONSORSHIP TEAM
+    {
+      name: "Ayush Singh",
+      position: "Sponsorship Team",
+      image: null, // Photo not available - Ayush Singh (different from Ayush Kumar)
+      linkedin: "#",
+      email: "ayush.singh@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    {
+      name: "Deepika Kumari Baskey",
+      position: "Sponsorship Team, Sports and Cultural Team", // Multiple positions
+      image: teamImages.deepika,
+      linkedin: "#",
+      email: "deepika.baskey@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    {
+      name: "Anish Kumar",
+      position: "Sponsorship Team, Public Relations Team", // Multiple positions
+      image: teamImages.anish,
+      linkedin: "#",
+      email: "anish.kumar@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+
+    // THIRD ROW: GATE-ESE Forum, Research, Social Media
+    // GATE-ESE FORUM
+    {
+      name: "Kaushal Kishore",
+      position: "GATE-ESE Forum, Editorial Team", // Multiple positions
+      image: teamImages.kaushal,
+      linkedin: "#",
+      email: "kaushal.kishore@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    {
+      name: "Pratyush Kumar Thakur",
+      position: "GATE-ESE Forum, Editorial Team", // Multiple positions
+      image: null, // Photo not available
+      linkedin: "#",
+      email: "pratyush.thakur@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    // RESEARCH AND PROJECT APPLICATION TEAM
+    {
+      name: "Devroshan Kumar",
+      position: "Research and Project Application Team",
+      image: teamImages.devroshan,
+      linkedin: "#",
+      email: "devroshan.kumar@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    {
+      name: "Suraj Kumar",
+      position: "Research and Project Application Team",
+      image: teamImages.suraj,
+      linkedin: "#",
+      email: "suraj.kumar@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    {
+      name: "Renu Kumari Hembrom",
+      position: "Research and Project Application Team, Editorial Team", // Multiple positions
+      image: teamImages.renu,
+      linkedin: "#",
+      email: "renu.hembrom@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    // SOCIAL MEDIA TEAM
+    {
+      name: "Aman Kumar Ishwar",
+      position: "Social Media Team",
+      image: teamImages.aman,
+      linkedin: "#",
+      email: "aman.ishwar@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+
+    // FOURTH ROW: Industrial Relations, Marketing, Editorial
+    // INDUSTRIAL RELATIONS TEAM
+    {
+      name: "Ahmad Raza",
+      position: "Industrial Relations Team",
+      image: teamImages.ahmad, // Photo available now
+      linkedin: "#",
+      email: "ahmad.raza@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    // MARKETING TEAM
+    {
+      name: "Shivam Singh",
+      position: "Marketing Team",
+      image: null, // Photo not available
+      linkedin: "#",
+      email: "shivam.singh@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    {
+      name: "Ayush Kumar",
+      position: "Marketing Team",
+      image: teamImages.ayush,
+      linkedin: "#",
+      email: "ayush.kumar@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    {
+      name: "Shubham Kumar Bhagat",
+      position: "Marketing Team",
+      image: teamImages.shubham,
+      linkedin: "#",
+      email: "shubham.bhagat@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    // EDITORIAL TEAM
+
+
+
+
+    // FIFTH ROW: Sports & Cultural, Public Relations
+    // SPORTS AND CULTURAL TEAM
+    {
+      name: "Aman Kumar Arya",
+      position: "Sports and Cultural Team",
+      image: teamImages.amanArya, // Photo available now
+      linkedin: "#",
+      email: "aman.arya@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+
+    {
+      name: "Sujit Kumar",
+      position: "Sports and Cultural Team",
+      image: null, // Photo not available
+      linkedin: "#",
+      email: "sujit.kumar@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
+    // PUBLIC RELATIONS TEAM
+    {
+      name: "Harsh Kumar",
+      position: "Public Relations Team",
+      image: teamImages.harsh,
+      linkedin: "#",
+      email: "harsh.kumar@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
     }
   ];
 
@@ -273,18 +355,18 @@ const Team2k23 = () => {
           <div className="text-center text-white">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2" />
-              Core Team 2023-2024
+              Core Members: In-Charge 2025-26
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold font-heading mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6">
               Meet Our
               <span className="block bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
-                New Leadership
+                2K23 Team
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-              Fresh perspectives and innovative ideas driving ACE BITS towards new heights of excellence
+              Dedicated students leading various teams to drive ACE BITS towards excellence and innovation
             </p>
           </div>
         </Container>
@@ -298,15 +380,15 @@ const Team2k23 = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-slate-900 mb-2">30</h3>
+              <h3 className="text-3xl font-bold text-slate-900 mb-2">35</h3>
               <p className="text-slate-600">Core Members</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-slate-900 mb-2">15+</h3>
-              <p className="text-slate-600">Departments</p>
+              <h3 className="text-3xl font-bold text-slate-900 mb-2">20+</h3>
+              <p className="text-slate-600">Teams</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -331,13 +413,13 @@ const Team2k23 = () => {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Our Fresh
+              Our Dedicated
               <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Leadership Team
+                Team Leaders
               </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Meet the new generation of leaders who will take ACE BITS to new heights
+              Meet the talented students leading various teams to drive ACE BITS forward
             </p>
           </div>
 
@@ -347,26 +429,47 @@ const Team2k23 = () => {
                 <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
                   {/* Member Image */}
                   <div className="relative mb-6">
-                    <div className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-green-100 group-hover:ring-green-300 transition-all duration-300">
-                      <img 
-                        src={member.image} 
-                        alt={member.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                        New Team
+                    <div 
+                      className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-green-100 group-hover:ring-green-300 transition-all duration-300 cursor-pointer group/image"
+                      onClick={() => member.image && openImageModal(member.image, member.name)}
+                    >
+                      {member.image ? (
+                        <img 
+                          src={member.image} 
+                          alt={member.name}
+                          className="w-full h-full object-cover object-center group-hover/image:scale-125 transition-all duration-500 ease-out"
+                          style={{ 
+                            objectPosition: member.name === "Kamlesh Kumar Sharma" ? '50% 50%' : 'center 20%' 
+                          }} // Perfect positioning for Kamlesh Sharma - head perfectly visible
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center group-hover/image:scale-110 transition-transform duration-300">
+                          <div className="text-gray-500 text-4xl font-bold group-hover/image:text-gray-700 transition-colors duration-300">
+                            {member.name.split(' ').map(n => n[0]).join('')}
+                          </div>
+                        </div>
+                      )}
+                      
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-all duration-300 rounded-full opacity-0 group-hover/image:opacity-100">
                       </div>
                     </div>
+                    
+                    {/* Photo Badge - Only for available photos */}
+                    {member.image && (
+                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                        <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg group-hover/image:shadow-xl transition-all duration-300">
+                        </div>
+                      </div>
+                    )}
                   </div>
 
                   {/* Member Info */}
                   <div className="text-center">
-                    <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-green-600 transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-green-600 transition-colors duration-300">
                       {member.name}
                     </h3>
-                    <p className="text-green-600 font-semibold mb-3">{member.position}</p>
+                    <p className="text-green-600 font-semibold mb-3 text-sm leading-tight">{member.position}</p>
 
                     {/* Contact Info */}
                     <div className="space-y-2 mb-4">
@@ -444,6 +547,37 @@ const Team2k23 = () => {
           </div>
         </Container>
       </section>
+
+      {/* Image Modal */}
+      {isModalOpen && selectedImage && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
+          <div className="relative max-w-4xl max-h-[90vh] bg-white rounded-2xl overflow-hidden shadow-2xl">
+            {/* Close Button */}
+            <button
+              onClick={closeImageModal}
+              className="absolute top-4 right-4 w-10 h-10 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center transition-colors duration-300 z-10"
+            >
+              ✕
+            </button>
+            
+            {/* Image */}
+            <div className="relative">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.name}
+                className="w-full h-auto max-h-[80vh] object-contain"
+              />
+              
+              {/* Member Name Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <h3 className="text-2xl font-bold text-white text-center">
+                  {selectedImage.name}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

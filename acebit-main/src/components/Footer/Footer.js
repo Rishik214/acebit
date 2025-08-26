@@ -230,8 +230,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Enhanced Institute Mission Statement */}
-        <div className="mt-20 p-10 bg-gradient-to-r from-white/10 to-white/5 rounded-3xl border border-white/20 shadow-2xl">
+        {/* Enhanced Institute Mission Statement - Commented Out */}
+        {/* <div className="mt-20 p-10 bg-gradient-to-r from-white/10 to-white/5 rounded-3xl border border-white/20 shadow-2xl">
           <div className="text-center">
             <div className="flex items-center justify-center mb-8">
               <h3 className="text-3xl font-bold text-white">Institute Mission</h3>
@@ -244,8 +244,8 @@ const Footer = () => {
               "Building the future, one engineer at a time"
             </p>
           </div>
-        </div>
-      </div>
+        </div> */}
+      </div> 
 
       {/* Enhanced Footer Bottom */}
       <div className="relative z-10 border-t border-white/30 bg-gradient-to-r from-slate-900/50 to-blue-900/50">

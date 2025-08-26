@@ -17,7 +17,7 @@ import {
 // Import real faculty photos
 import jituhod from "../../assets/images/faculty/jituhod.webp";
 import pksharma from "../../assets/images/faculty/pksharma.webp";
-import prashantmalvia from "../../assets/images/faculty/prashantmalvia.webp";
+import nishikant from "../../assets/images/faculty/nishikant.webp";
 import pankajrai from "../../assets/images/faculty/pankajrai.webp";
 
 const PatronageSection = () => {
@@ -63,11 +63,11 @@ const PatronageSection = () => {
     },
     {
       id: 4,
-      name: "Prashant Ranjan Malviya",
+      name: "Dr. Nishikant Kumar",
       position: "Assistant Professor Incharge",
       institution: "ACE BIT Sindri",
       location: "Dhanbad, Jharkhand",
-      image: prashantmalvia,
+      image: nishikant,
       quote: "I want to express my deepest gratitude to both students and faculty for their invaluable contributions to our academic community. Thank you for your tireless efforts and involvement in our activities and events.",
       rating: 5,
       color: "from-rose-600 via-pink-600 to-fuchsia-600"
