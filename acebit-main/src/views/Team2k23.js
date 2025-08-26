@@ -40,9 +40,9 @@ const teamImages = {
   shivam: null, // Photo not available
   shubham: "/images/2k23/subham.jpg",
   kamlesh: "/images/2k23/kamlesh%20kumar%20sharma.jpg",
-  rishikesh: null, // Photo not available
+  rishikesh: "/images/2k23/rishikesh.jpg", // Photo available now
   anish: "/images/2k23/Anish_Kumar.jpg",
-  ahmad: "/images/2k23/ahmad.jpg",
+  ahmad: "/images/2k23/ahmad%20raza.webp", // Updated photo path with URL encoding
   amanArya: "/images/2k23/aman%20arya.jpg"
 };
 
@@ -104,6 +104,14 @@ const Team2k23 = () => {
       email: "tanvi.oraon@bitsindri.ac.in",
       phone: "+91-XXXXXXXXXX"
     },
+    {
+      name: "Animesh Chatterjee",
+      position: "Alumni Relations Team",
+      image: teamImages.animesh,
+      linkedin: "#",
+      email: "animesh.chatterjee@bitsindri.ac.in",
+      phone: "+91-XXXXXXXXXX"
+    },
     // OPERATIONAL TEAM
     {
       name: "Soumya Kumari",
@@ -141,7 +149,7 @@ const Team2k23 = () => {
     {
       name: "Rishikesh Kumar",
       position: "Development Team",
-      image: null, // Photo not available
+      image: teamImages.rishikesh, // Photo available now
       linkedin: "#",
       email: "rishikesh.kumar@bitsindri.ac.in",
       phone: "+91-XXXXXXXXXX"
@@ -176,7 +184,7 @@ const Team2k23 = () => {
     // IDEATION TEAM
     {
       name: "Shreya Keshri",
-      position: "Ideation Team",
+      position: "Ideation Team, Industrial Relations Team",
       image: teamImages.shreya,
       linkedin: "#",
       email: "shreya.keshri@bitsindri.ac.in",
@@ -281,7 +289,7 @@ const Team2k23 = () => {
     // INDUSTRIAL RELATIONS TEAM
     {
       name: "Ahmad Raza",
-      position: "Industrial Relations Team",
+      position: "Industrial Relations Team, Industry Alumni Team",
       image: teamImages.ahmad, // Photo available now
       linkedin: "#",
       email: "ahmad.raza@bitsindri.ac.in",

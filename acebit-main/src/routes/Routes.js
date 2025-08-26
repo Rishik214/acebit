@@ -15,6 +15,8 @@ import {
   HyperLoop,
   Magazine,
   Gate,
+  RISCE2024,
+  TestPage,
 
 } from "../views";
 import Gallery from "../components/homepageSections/Gallery";
@@ -32,6 +34,7 @@ const CommonRoutes = () => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
+      <Route exact path="/risce" component={RISCE2024} />
       <Route exact path="/about" component={About} />
       <Route exact path="/gallery" component={Gallery} />
       <Route exact path="/coordinators" component={Coordinators} />
@@ -54,6 +57,7 @@ const CommonRoutes = () => {
       {/* <Route exact path="/pricing" component={Pricing} /> */}
       <Route exact path="/blogs" component={Blogs} />
       <Route exact path="/constitution" component={Constitution} />
+      <Route exact path="/test" component={TestPage} />
       <Route exact path="/magazine" component={Magazine} />
       <Route exact path="/posting" component={Posting} />
       <Route exact path="/gate" component={Gate} />

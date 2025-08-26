@@ -12,6 +12,8 @@ export { default as Department } from "./Department";
 export { default as Posting } from "./Posting";
 // export { default as Pricing } from "./Pricing";
 export { default as Constitution } from "./Constitution";
+export { default as RISCE2024 } from "./RISCE2024";
+export { default as TestPage } from "./TestPage";
 export { default as Magazine } from "./Magazine";
 export { default as Gate } from "./Gate";
 

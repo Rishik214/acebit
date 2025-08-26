@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { 
   Calendar, 
   Clock, 
@@ -116,11 +117,16 @@ const Events = () => {
 
       <Container className="relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-sm font-medium mb-6 text-white animate-slide-up">
-            <Calendar className="w-4 h-4 mr-2" />
-            Our Events & Activities
-          </div>
+                  <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-sm font-medium mb-6 text-white animate-slide-up">
+              <Calendar className="w-4 h-4 mr-2" />
+              Our Events & Activities
+            </div>
+            <div className="mb-4">
+              <Link to="/risce" className="text-blue-400 hover:text-blue-300 underline">
+                Test: Click here to go to RISCE page
+              </Link>
+            </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-slide-up" style={{animationDelay: '0.2s'}}>
             Upcoming & Past
@@ -205,9 +211,26 @@ const Events = () => {
                     </div>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold py-3 px-4 rounded-xl hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 hover:scale-105">
-                    Register Now
-                  </button>
+                  <div className="space-y-3">
+                    <Link 
+                      to="/risce" 
+                      onClick={() => {
+                        console.log("View Details clicked, navigating to /risce");
+                        console.log("Current location:", window.location.href);
+                      }}
+                      className="block w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold py-3 px-4 rounded-xl hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 hover:scale-105 text-center"
+                    >
+                      View Details
+                    </Link>
+                    <a 
+                      href="https://risce.org" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full bg-white/10 text-white font-semibold py-3 px-4 rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/30 text-center"
+                    >
+                      Visit Website
+                    </a>
+                  </div>
                 </div>
               </Col>
             ))}

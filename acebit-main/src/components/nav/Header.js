@@ -15,6 +15,40 @@ const Header = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => ({ ...state }));
   const [show, setShow] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
+
+  // Handle scroll effect for navbar color change - white on hero section
+  React.useEffect(() => {
+    const handleScroll = () => {
+      // Get hero section height (approximately 100vh)
+      const heroHeight = window.innerHeight;
+      const scrollThreshold = heroHeight * 0.1;
+      
+      console.log('Scroll Y:', window.scrollY, 'Threshold:', scrollThreshold);
+      
+      if (window.scrollY > scrollThreshold) { // 10% of hero height
+        console.log('Setting navbar to WHITE');
+        setIsScrolled(true); // White navbar
+      } else {
+        console.log('Setting navbar to BLACK');
+        setIsScrolled(false); // Black navbar
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Handle window resize for responsive design
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const showDropdown = (e) => {
     setShow(!show);
@@ -33,7 +67,24 @@ const Header = () => {
   };
 
   return (
-    <Navbar collapseOnSelect expand="lg">
+    <Navbar 
+      collapseOnSelect 
+      expand="lg" 
+      style={{
+        paddingTop: '15px',
+        paddingBottom: '15px',
+        backgroundColor: isScrolled ? 'rgba(255,255,255,0.95)' : 'rgba(0,0,0,0.85)',
+        backdropFilter: isScrolled ? 'blur(20px)' : 'blur(15px)',
+        boxShadow: isScrolled ? '0 4px 25px rgba(0,0,0,0.08)' : '0 4px 20px rgba(0,0,0,0.3)',
+        borderBottom: isScrolled ? '1px solid rgba(0,0,0,0.05)' : '1px solid rgba(255,255,255,0.1)',
+        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 1000
+      }}
+    >
       <Container>
         <LinkContainer to="">
           <Navbar.Brand>
@@ -44,7 +95,14 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav w-100 justify-content-end">
           <Nav className="ml-auto">
             <LinkContainer to="/about">
-              <Nav.Link>About</Nav.Link>
+              <Nav.Link style={{
+                color: isScrolled ? '#1f2937' : 'rgba(255,255,255,0.95)',
+                fontSize: '14px',
+                padding: '12px 15px',
+                fontWeight: 600,
+                transition: 'all 0.3s ease',
+                textDecoration: 'none'
+              }}>About</Nav.Link>
             </LinkContainer>
             <NavDropdown
               id="nav-dropdown-dark-example"
@@ -52,6 +110,13 @@ const Header = () => {
               show={show}
               onMouseEnter={showDropdown}
               onMouseLeave={hideDropdown}
+              style={{
+                color: isScrolled ? '#1f2937' : 'rgba(255,255,255,0.95)',
+                fontSize: '14px',
+                padding: '12px 15px',
+                fontWeight: 600,
+                transition: 'all 0.3s ease'
+              }}
             >
               <NavDropdown.Item>
                 <LinkContainer to="/department">
@@ -75,18 +140,54 @@ const Header = () => {
               </NavDropdown.Item>
             </NavDropdown>
             <LinkContainer to="/constitution">
-              <Nav.Link>Constitution</Nav.Link>
-            </LinkContainer><LinkContainer to="/magazine">
-              <Nav.Link>Magazine</Nav.Link>
+              <Nav.Link style={{
+                color: isScrolled ? '#1f2937' : 'rgba(255,255,255,0.95)',
+                fontSize: isMobile ? '11px' : '14px',
+                padding: isMobile ? '6px 8px' : '12px 15px',
+                fontWeight: 600,
+                transition: 'all 0.3s ease',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                minWidth: isMobile ? '80px' : 'auto',
+                textAlign: 'center'
+              }}>Constitution</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/magazine">
+              <Nav.Link style={{
+                color: isScrolled ? '#1f2937' : 'rgba(255,255,255,0.95)',
+                fontSize: '14px',
+                padding: '12px 15px',
+                fontWeight: 600,
+                transition: 'all 0.3s ease',
+                textDecoration: 'none'
+              }}>Magazine</Nav.Link>
             </LinkContainer>
             {!user && (
               <LinkContainer to="/login">
-                <Nav.Link>Login</Nav.Link>
+                <Nav.Link style={{
+                  color: isScrolled ? '#1f2937' : 'rgba(255,255,255,0.95)',
+                  fontSize: '14px',
+                  padding: '12px 15px',
+                  fontWeight: 600,
+                  transition: 'all 0.3s ease',
+                  textDecoration: 'none'
+                }}>Login</Nav.Link>
               </LinkContainer>
             )}
             {!user && (
-              <LinkContainer className="sign-up-nav" to="/">
-                <Nav.Link>Home</Nav.Link>
+              <LinkContainer to="/">
+                <Nav.Link style={{
+                  background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                  padding: '12px 25px',
+                  color: '#fff',
+                  borderRadius: '25px',
+                  fontSize: '14px',
+                  fontWeight: 600,
+                  transition: 'all 0.3s ease',
+                  textDecoration: 'none'
+                }}>Home</Nav.Link>
               </LinkContainer>
             )}
 
@@ -94,6 +195,13 @@ const Header = () => {
               <NavDropdown
                 title={user.email && user.email.split("@")[0]}
                 id="navbarScrollingDropdown"
+                style={{
+                  color: isScrolled ? '#1f2937' : 'rgba(255,255,255,0.95)',
+                  fontSize: '14px',
+                  padding: '12px 15px',
+                  fontWeight: 600,
+                  transition: 'all 0.3s ease'
+                }}
               >
                 {user.role === "subscriber" ? (
                   <NavDropdown.Item key="subscriber">
