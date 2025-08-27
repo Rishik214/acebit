@@ -280,7 +280,7 @@ function App() {
     },
     {
       name: "Deepak Prakash",
-      img: deepak,
+      img: deepakp,
       review: "Secretary",
       url: "#"
     },
