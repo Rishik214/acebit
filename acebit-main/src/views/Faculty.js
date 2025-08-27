@@ -6,16 +6,15 @@ import {
   Users, 
   Star,
   Mail,
-  Phone,
   MapPin,
   Building,
   BookOpen,
-  Target,
-  Linkedin
+  Target
 } from "lucide-react";
 
 // Import faculty photos
 import jituhod from "../assets/images/faculty/jituhod.webp";
+import prafullaSharma from "../assets/images/faculty/prafulla sharma .jpg";
 import vikrama_pandey from "../assets/images/faculty/vikrama-pandey.webp";
 import sanjay_shukla from "../assets/images/faculty/sanjay_shukla.webp";
 import uksingh from "../assets/images/faculty/uksingh.webp";
@@ -26,7 +25,6 @@ import sheokumar from "../assets/images/faculty/sheokumar.webp";
 import sarojmeena from "../assets/images/faculty/sarojmeena.webp";
 import sumitkumar from "../assets/images/faculty/sumitkumar.webp";
 import prakash from "../assets/images/faculty/prakash.webp";
-import pksharma from "../assets/images/faculty/pksharma.webp";
 import nishikant from "../assets/images/faculty/nishikant.webp";
 import prashantmalvia from "../assets/images/faculty/prashantmalvia.webp";
 import nipendas from "../assets/images/faculty/nipendas.webp";
@@ -37,166 +35,131 @@ import abhijeet_anand from "../assets/images/faculty/abhijeet_anand.webp";
 const Faculty = () => {
   const facultyData = [
     {
-      name: "Dr. Jitu Kujur",
+      name: "Dr. Prafulla Sharma",
       position: "Head of Department",
+      image: prafullaSharma,
+      email: "prafulla.sharma@bitsindri.ac.in",
+      specialization: "Structural Engineering"
+    },
+    {
+      name: "Dr. Jitu Kujur",
+      position: "Professor",
       image: jituhod,
       email: "jitu.kujur@bitsindri.ac.in",
-      phone: "+91-94311-12345",
-      specialization: "Structural Engineering",
-      linkedin: "https://linkedin.com/in/jitu-kujur"
+      specialization: "Structural Engineering"
     },
     {
       name: "Dr. Vikrama Pandey",
       position: "Professor",
       image: vikrama_pandey,
       email: "vikrama.pandey@bitsindri.ac.in",
-      phone: "+91-94311-12346",
-      specialization: "Geotechnical Engineering",
-      linkedin: "https://linkedin.com/in/vikrama-pandey"
+      specialization: "Geotechnical Engineering"
     },
     {
       name: "Dr. Sanjay Shukla",
       position: "Adjunct Professor",
       image: sanjay_shukla,
       email: "sanjay.shukla@bitsindri.ac.in",
-      phone: "+91-94311-12347",
-      specialization: "Transportation Engineering",
-      linkedin: "https://linkedin.com/in/sanjay-shukla"
+      specialization: "Transportation Engineering"
     },
     {
       name: "Dr. U.K. Singh",
       position: "Professor",
       image: uksingh,
       email: "uk.singh@bitsindri.ac.in",
-      phone: "+91-94311-12348",
-      specialization: "Water Resources Engineering",
-      linkedin: "https://linkedin.com/in/uk-singh"
+      specialization: "Water Resources Engineering"
     },
     {
       name: "Dr. Ranvijay Kumar",
       position: "Professor",
       image: ranvijay,
       email: "ranvijay.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12349",
-      specialization: "Environmental Engineering",
-      linkedin: "https://linkedin.com/in/ranvijay-kumar"
+      specialization: "Environmental Engineering"
     },
     {
       name: "Dr. Maya Ray",
       position: "Associate Professor",
       image: mayaray,
       email: "maya.ray@bitsindri.ac.in",
-      phone: "+91-94311-12350",
-      specialization: "Construction Management",
-      linkedin: "https://linkedin.com/in/maya-ray"
+      specialization: "Construction Management"
     },
     {
       name: "Dr. B.D. Yadav",
       position: "Assistant Professor",
       image: bdyadav,
       email: "bd.yadav@bitsindri.ac.in",
-      phone: "+91-94311-12351",
-      specialization: "Structural Analysis",
-      linkedin: "https://linkedin.com/in/bd-yadav"
+      specialization: "Structural Analysis"
     },
     {
       name: "Dr. Sheo Kumar",
       position: "Assistant Professor",
       image: sheokumar,
       email: "sheo.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12352",
-      specialization: "Surveying & GIS",
-      linkedin: "https://linkedin.com/in/sheo-kumar"
+      specialization: "Surveying & GIS"
     },
     {
       name: "Dr. Saroj Meena",
       position: "Assistant Professor",
       image: sarojmeena,
       email: "saroj.meena@bitsindri.ac.in",
-      phone: "+91-94311-12353",
-      specialization: "Hydraulics & Irrigation",
-      linkedin: "https://linkedin.com/in/saroj-meena"
+      specialization: "Hydraulics & Irrigation"
     },
     {
       name: "Dr. Sumit Kumar",
       position: "Assistant Professor",
       image: sumitkumar,
       email: "sumit.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12354",
-      specialization: "Concrete Technology",
-      linkedin: "https://linkedin.com/in/sumit-kumar"
+      specialization: "Concrete Technology"
     },
     {
       name: "Dr. Prakash Kumar",
       position: "Assistant Professor",
       image: prakash,
       email: "prakash.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12355",
-      specialization: "Soil Mechanics",
-      linkedin: "https://linkedin.com/in/prakash-kumar"
+      specialization: "Soil Mechanics"
     },
-    {
-      name: "Dr. P.K. Sharma",
-      position: "Assistant Professor",
-      image: pksharma,
-      email: "pk.sharma@bitsindri.ac.in",
-      phone: "+91-94311-12356",
-      specialization: "Highway Engineering",
-      linkedin: "https://linkedin.com/in/pk-sharma"
-    },
+
     {
       name: "Dr. Nishikant Kumar",
       position: "Assistant Professor",
       image: nishikant,
       email: "nishikant.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12357",
-      specialization: "Building Materials",
-      linkedin: "https://linkedin.com/in/nishikant-kumar"
+      specialization: "Building Materials"
     },
     {
       name: "Dr. Prashant Malvia",
       position: "Assistant Professor",
       image: prashantmalvia,
       email: "prashant.malvia@bitsindri.ac.in",
-      phone: "+91-94311-12358",
-      specialization: "Transportation Planning",
-      linkedin: "https://linkedin.com/in/prashant-malvia"
+      specialization: "Transportation Planning"
     },
     {
       name: "Dr. Nipen Das",
       position: "Assistant Professor",
       image: nipendas,
       email: "nipen.das@bitsindri.ac.in",
-      phone: "+91-94311-12359",
-      specialization: "Geotechnical Engineering",
-      linkedin: "https://linkedin.com/in/nipen-das"
+      specialization: "Geotechnical Engineering"
     },
     {
       name: "Dr. Komal Kumari",
       position: "Assistant Professor",
       image: komal,
       email: "komal.kumari@bitsindri.ac.in",
-      phone: "+91-94311-12360",
-      specialization: "Environmental Science",
-      linkedin: "https://linkedin.com/in/komal-kumari"
+      specialization: "Environmental Science"
     },
     {
       name: "Dr. Iqbal Sheikh",
       position: "Assistant Professor",
       image: iqbal_sheikh,
       email: "iqbal.sheikh@bitsindri.ac.in",
-      phone: "+91-94311-12361",
-      specialization: "Structural Dynamics",
-      linkedin: "https://linkedin.com/in/iqbal-sheikh"
+      specialization: "Structural Dynamics"
     },
     {
       name: "Dr. Abhijeet Anand",
       position: "Assistant Professor",
       image: abhijeet_anand,
       email: "abhijeet.anand@bitsindri.ac.in",
-      phone: "+91-94311-12362",
-      specialization: "Construction Technology",
-      linkedin: "https://linkedin.com/in/abhijeet-anand"
+      specialization: "Construction Technology"
     }
   ];
 
@@ -284,21 +247,11 @@ const Faculty = () => {
                         <span className="truncate">{faculty.email}</span>
                       </div>
                       <div className="flex items-center justify-center text-slate-500 text-sm">
-                        <Phone className="w-4 h-4 mr-2" />
-                        <span>{faculty.phone}</span>
+                        
                       </div>
                     </div>
 
-                    {/* LinkedIn Button */}
-                    <a 
-                      href={faculty.linkedin} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group-hover:scale-105"
-                    >
-                      <Linkedin className="w-4 h-4 mr-2" />
-                      Connect
-                    </a>
+
                   </div>
                 </div>
               </div>

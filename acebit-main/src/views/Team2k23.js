@@ -6,7 +6,6 @@ import {
   Star, 
   Linkedin,
   Mail,
-  Phone,
   Heart,
   Target,
   TrendingUp,
@@ -85,32 +84,28 @@ const Team2k23 = () => {
       position: "Counselling Team",
       image: teamImages.aryan,
       linkedin: "#",
-      email: "aryan.singh@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "aryan.singh@bitsindri.ac.in"
     },
     {
       name: "Jagriti Singh",
       position: "Counselling Team",
       image: null, // Photo not available
       linkedin: "#",
-      email: "jagriti.singh@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "jagriti.singh@bitsindri.ac.in"
     },
     {
       name: "Tanvi Oraon",
       position: "Counselling Team, Alumni Relations Team", // Multiple positions
       image: teamImages.tanvi,
       linkedin: "#",
-      email: "tanvi.oraon@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "tanvi.oraon@bitsindri.ac.in"
     },
     {
       name: "Animesh Chatterjee",
       position: "Alumni Relations Team",
       image: teamImages.animesh,
       linkedin: "#",
-      email: "animesh.chatterjee@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "animesh.chatterjee@bitsindri.ac.in"
     },
     // OPERATIONAL TEAM
     {
@@ -118,24 +113,21 @@ const Team2k23 = () => {
       position: "Operational Team, Sponsorship Team", // Multiple positions
       image: teamImages.soumya,
       linkedin: "#",
-      email: "soumya.kumari@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "soumya.kumari@bitsindri.ac.in"
     },
     {
       name: "Sumit Sen",
       position: "Operational Team, Editorial Team", // Multiple positions
       image: teamImages.sumit,
       linkedin: "#",
-      email: "sumit.sen@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "sumit.sen@bitsindri.ac.in"
     },
     {
       name: "Ayush Kumar Bhagat",
       position: "Operational Team",
       image: null, // Photo not available - Ayush Kumar Bhagat
       linkedin: "#",
-      email: "ayush.bhagat@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "ayush.bhagat@bitsindri.ac.in"
     },
     // DEVELOPMENT TEAM (Centre of first row)
     {
@@ -143,16 +135,14 @@ const Team2k23 = () => {
       position: "Development Team",
       image: teamImages.kamlesh, // Photo available now
       linkedin: "#",
-      email: "kamlesh.sharma@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "kamlesh.sharma@bitsindri.ac.in"
     },
     {
       name: "Rishikesh Kumar",
       position: "Development Team",
       image: teamImages.rishikesh, // Photo available now
       linkedin: "#",
-      email: "rishikesh.kumar@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "rishikesh.kumar@bitsindri.ac.in"
     },
 
     // SECOND ROW: Designing, Ideation, Sponsorship
@@ -162,24 +152,21 @@ const Team2k23 = () => {
       position: "Designing Team",
       image: teamImages.tisha,
       linkedin: "#",
-      email: "tisha.khalkho@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "tisha.khalkho@bitsindri.ac.in"
     },
     {
       name: "Rishav Raj",
       position: "Designing Team",
       image: teamImages.rishav,
       linkedin: "#",
-      email: "rishav.raj@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "rishav.raj@bitsindri.ac.in"
     },
     {
       name: "Shashi Kumar",
       position: "Designing Team, Social Media Team", // Multiple positions
       image: teamImages.shashi, // Photo available now
       linkedin: "#",
-      email: "shashi.kumar@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "shashi.kumar@bitsindri.ac.in"
     },
     // IDEATION TEAM
     {
@@ -187,24 +174,21 @@ const Team2k23 = () => {
       position: "Ideation Team, Industrial Relations Team",
       image: teamImages.shreya,
       linkedin: "#",
-      email: "shreya.keshri@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "shreya.keshri@bitsindri.ac.in"
     },
     {
       name: "Rahul Kumar Saw",
       position: "Ideation Team",
       image: null, // Photo not available
       linkedin: "#",
-      email: "rahul.saw@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "rahul.saw@bitsindri.ac.in"
     },
     {
       name: "Nitish Kumar",
       position: "Ideation Team",
       image: teamImages.nitish,
       linkedin: "#",
-      email: "nitish.kumar@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "nitish.kumar@bitsindri.ac.in"
     },
     // SPONSORSHIP TEAM
     {
@@ -212,24 +196,21 @@ const Team2k23 = () => {
       position: "Sponsorship Team",
       image: null, // Photo not available - Ayush Singh (different from Ayush Kumar)
       linkedin: "#",
-      email: "ayush.singh@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "ayush.singh@bitsindri.ac.in"
     },
     {
       name: "Deepika Kumari Baskey",
       position: "Sponsorship Team, Sports and Cultural Team", // Multiple positions
       image: teamImages.deepika,
       linkedin: "#",
-      email: "deepika.baskey@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "deepika.baskey@bitsindri.ac.in"
     },
     {
       name: "Anish Kumar",
       position: "Sponsorship Team, Public Relations Team", // Multiple positions
       image: teamImages.anish,
       linkedin: "#",
-      email: "anish.kumar@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "anish.kumar@bitsindri.ac.in"
     },
 
     // THIRD ROW: GATE-ESE Forum, Research, Social Media
@@ -239,16 +220,14 @@ const Team2k23 = () => {
       position: "GATE-ESE Forum, Editorial Team", // Multiple positions
       image: teamImages.kaushal,
       linkedin: "#",
-      email: "kaushal.kishore@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "kaushal.kishore@bitsindri.ac.in"
     },
     {
       name: "Pratyush Kumar Thakur",
       position: "GATE-ESE Forum, Editorial Team", // Multiple positions
       image: null, // Photo not available
       linkedin: "#",
-      email: "pratyush.thakur@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "pratyush.thakur@bitsindri.ac.in"
     },
     // RESEARCH AND PROJECT APPLICATION TEAM
     {
@@ -256,24 +235,21 @@ const Team2k23 = () => {
       position: "Research and Project Application Team",
       image: teamImages.devroshan,
       linkedin: "#",
-      email: "devroshan.kumar@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "devroshan.kumar@bitsindri.ac.in"
     },
     {
       name: "Suraj Kumar",
       position: "Research and Project Application Team",
       image: teamImages.suraj,
       linkedin: "#",
-      email: "suraj.kumar@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "suraj.kumar@bitsindri.ac.in"
     },
     {
       name: "Renu Kumari Hembrom",
       position: "Research and Project Application Team, Editorial Team", // Multiple positions
       image: teamImages.renu,
       linkedin: "#",
-      email: "renu.hembrom@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "renu.hembrom@bitsindri.ac.in"
     },
     // SOCIAL MEDIA TEAM
     {
@@ -281,8 +257,7 @@ const Team2k23 = () => {
       position: "Social Media Team",
       image: teamImages.aman,
       linkedin: "#",
-      email: "aman.ishwar@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "aman.ishwar@bitsindri.ac.in"
     },
 
     // FOURTH ROW: Industrial Relations, Marketing, Editorial
@@ -292,8 +267,7 @@ const Team2k23 = () => {
       position: "Industrial Relations Team, Industry Alumni Team",
       image: teamImages.ahmad, // Photo available now
       linkedin: "#",
-      email: "ahmad.raza@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "ahmad.raza@bitsindri.ac.in"
     },
     // MARKETING TEAM
     {
@@ -301,24 +275,21 @@ const Team2k23 = () => {
       position: "Marketing Team",
       image: null, // Photo not available
       linkedin: "#",
-      email: "shivam.singh@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "shivam.singh@bitsindri.ac.in"
     },
     {
       name: "Ayush Kumar",
       position: "Marketing Team",
       image: teamImages.ayush,
       linkedin: "#",
-      email: "ayush.kumar@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "ayush.kumar@bitsindri.ac.in"
     },
     {
       name: "Shubham Kumar Bhagat",
       position: "Marketing Team",
       image: teamImages.shubham,
       linkedin: "#",
-      email: "shubham.bhagat@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "shubham.bhagat@bitsindri.ac.in"
     },
     // EDITORIAL TEAM
 
@@ -332,8 +303,7 @@ const Team2k23 = () => {
       position: "Sports and Cultural Team",
       image: teamImages.amanArya, // Photo available now
       linkedin: "#",
-      email: "aman.arya@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "aman.arya@bitsindri.ac.in"
     },
 
     {
@@ -341,8 +311,7 @@ const Team2k23 = () => {
       position: "Sports and Cultural Team",
       image: null, // Photo not available
       linkedin: "#",
-      email: "sujit.kumar@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "sujit.kumar@bitsindri.ac.in"
     },
     // PUBLIC RELATIONS TEAM
     {
@@ -350,8 +319,7 @@ const Team2k23 = () => {
       position: "Public Relations Team",
       image: teamImages.harsh,
       linkedin: "#",
-      email: "harsh.kumar@bitsindri.ac.in",
-      phone: "+91-XXXXXXXXXX"
+      email: "harsh.kumar@bitsindri.ac.in"
     }
   ];
 
@@ -486,8 +454,7 @@ const Team2k23 = () => {
                         <span className="truncate">{member.email}</span>
                       </div>
                       <div className="flex items-center justify-center text-slate-500 text-sm">
-                        <Phone className="w-4 h-4 mr-2" />
-                        <span>{member.phone}</span>
+                        
                       </div>
                     </div>
 

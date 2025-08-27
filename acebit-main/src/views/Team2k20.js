@@ -6,7 +6,6 @@ import {
   Star, 
   Linkedin,
   Mail,
-  Phone,
   Heart,
   Target,
   TrendingUp,
@@ -38,136 +37,119 @@ const Team2k20 = () => {
       position: "President",
       image: president,
       linkedin: "https://www.linkedin.com/in/adarsh-sah-92a966182/",
-      email: "adarsh.sah@bitsindri.ac.in",
-      phone: "+91-94311-12383"
+      email: "adarsh.sah@bitsindri.ac.in"
     },
     {
       name: "Sourav Anand",
       position: "Vice President",
       image: vicePresident1,
       linkedin: "https://www.linkedin.com/in/sourav-anand-99a7a1202/",
-      email: "sourav.anand@bitsindri.ac.in",
-      phone: "+91-94311-12384"
+      email: "sourav.anand@bitsindri.ac.in"
     },
     {
       name: "Uma Dutta",
       position: "Vice President",
       image: vicePresident2,
       linkedin: "https://www.linkedin.com/in/uma-dutta-69ab8a228/",
-      email: "uma.dutta@bitsindri.ac.in",
-      phone: "+91-94311-12385"
+      email: "uma.dutta@bitsindri.ac.in"
     },
     {
       name: "Ashish Ujjwal Thakur",
       position: "Joint Secretary",
       image: js1,
       linkedin: "https://www.linkedin.com/in/ashish-ujjwal-thakur-71633b217/",
-      email: "ashish.thakur@bitsindri.ac.in",
-      phone: "+91-94311-12386"
+      email: "ashish.thakur@bitsindri.ac.in"
     },
     {
       name: "Shabnam Kumari",
       position: "Joint Secretary",
       image: js2,
       linkedin: "https://www.linkedin.com/in/shabnam-kumari-005032241/",
-      email: "shabnam.kumari@bitsindri.ac.in",
-      phone: "+91-94311-12387"
+      email: "shabnam.kumari@bitsindri.ac.in"
     },
     {
       name: "Rajan Kumar",
       position: "Treasurer",
       image: trsr,
       linkedin: "https://www.linkedin.com/in/",
-      email: "rajan.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12388"
+      email: "rajan.kumar@bitsindri.ac.in"
     },
     {
       name: "Harsh Kr. Chourasia",
       position: "Joint Treasurer",
       image: jtrsr,
       linkedin: "https://www.linkedin.com/in/harsh-chourasia-a405a320b/",
-      email: "harsh.chourasia@bitsindri.ac.in",
-      phone: "+91-94311-12389"
+      email: "harsh.chourasia@bitsindri.ac.in"
     },
     {
       name: "Dharmveer Mahtha",
       position: "Technical Head",
       image: techhead,
       linkedin: "www.linkedin.com/in/dharm-veer-043743221",
-      email: "dharmveer.mahtha@bitsindri.ac.in",
-      phone: "+91-94311-12390"
+      email: "dharmveer.mahtha@bitsindri.ac.in"
     },
     {
       name: "Amisha Rani",
       position: "Marketing Head",
       image: mh,
       linkedin: "https://www.linkedin.com/in/amisha-rani-817458205/",
-      email: "amisha.rani@bitsindri.ac.in",
-      phone: "+91-94311-12391"
+      email: "amisha.rani@bitsindri.ac.in"
     },
     {
       name: "Sushanto Shekhar",
       position: "Marketing Head",
       image: ch,
       linkedin: "https://www.linkedin.com/in/sushanto-shekhar/",
-      email: "sushanto.shekhar@bitsindri.ac.in",
-      phone: "+91-94311-12392"
+      email: "sushanto.shekhar@bitsindri.ac.in"
     },
     {
       name: "Rohit Kumar",
       position: "Research & Development Head",
       image: rd,
       linkedin: "https://www.linkedin.com/in/rohit-kumar-b77260216/",
-      email: "rohit.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12393"
+      email: "rohit.kumar@bitsindri.ac.in"
     },
     {
       name: "Jitendra Rajwar",
       position: "GATE & ESE Forum Head",
       image: gate,
       linkedin: "https://www.linkedin.com/in/jitendra-rajwar-aa86b4230/",
-      email: "jitendra.rajwar@bitsindri.ac.in",
-      phone: "+91-94311-12394"
+      email: "jitendra.rajwar@bitsindri.ac.in"
     },
     {
       name: "Aditya",
       position: "Editorial Head",
       image: edtorl,
       linkedin: "https://www.linkedin.com/in/",
-      email: "aditya@bitsindri.ac.in",
-      phone: "+91-94311-12395"
+      email: "aditya@bitsindri.ac.in"
     },
     {
       name: "Sumit",
       position: "Alumni Coordinator",
       image: alumini,
       linkedin: "https://www.linkedin.com/in/",
-      email: "sumit@bitsindri.ac.in",
-      phone: "+91-94311-12396"
+      email: "sumit@bitsindri.ac.in"
     },
     {
       name: "Professional Head",
       position: "Professional Head",
       image: pro,
       linkedin: "https://www.linkedin.com/in/",
-      email: "professional@bitsindri.ac.in",
-      phone: "+91-94311-12397"
+      email: "professional@bitsindri.ac.in"
     },
     {
       name: "Social Head",
       position: "Social Head",
       image: sh,
       linkedin: "https://www.linkedin.com/in/",
-      email: "social@bitsindri.ac.in",
-      phone: "+91-94311-12398"
+      email: "social@bitsindri.ac.in"
     },
     {
       name: "Sahabuddin",
       position: "Event Planning Head",
       image: eph,
       linkedin: "https://www.linkedin.com/in/",
-      email: "sahabuddin@bitsindri.ac.in",
-      phone: "+91-94311-12399"
+      email: "sahabuddin@bitsindri.ac.in"
     }
   ];
 
@@ -190,7 +172,7 @@ const Team2k20 = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-              The pioneers who laid the foundation for ACE BITS and established our legacy of excellence
+              Dedicated leaders who contributed to ACE BITS and helped build our legacy of excellence
             </p>
           </div>
         </Container>
@@ -237,13 +219,13 @@ const Team2k20 = () => {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Our Founding
+              Our Dynamic
               <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Leadership Team
               </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Meet the pioneers who established ACE BITS and set the foundation for our success
+              Meet the dedicated leaders who contributed to ACE BITS
             </p>
           </div>
 
@@ -281,8 +263,7 @@ const Team2k20 = () => {
                         <span className="truncate">{member.email}</span>
                       </div>
                       <div className="flex items-center justify-center text-slate-500 text-sm">
-                        <Phone className="w-4 h-4 mr-2" />
-                        <span>{member.phone}</span>
+                        
                       </div>
                     </div>
 
@@ -309,13 +290,13 @@ const Team2k20 = () => {
         <Container>
           <div className="text-center text-white mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our Founding
+              Our Team
               <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-                Legacy
+                Impact
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The principles and values established by our 2K20 team continue to guide us today
+              The contributions and achievements of our 2K20 team continue to inspire us today
             </p>
           </div>
 
@@ -326,7 +307,7 @@ const Team2k20 = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Foundation</h3>
               <p className="text-gray-300">
-                Established the core structure and values that define ACE BITS today
+                Contributed to the structure and values that help define ACE BITS
               </p>
             </div>
             <div className="text-center">

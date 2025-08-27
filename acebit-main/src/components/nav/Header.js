@@ -18,27 +18,27 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
 
-  // Handle scroll effect for navbar color change - white on hero section
+  // Handle scroll effect for navbar color change - black on hero section, white on other sections
   React.useEffect(() => {
     const handleScroll = () => {
       // Get hero section height (approximately 100vh)
       const heroHeight = window.innerHeight;
-      const scrollThreshold = heroHeight * 0.1;
+      const scrollThreshold = heroHeight * 0.8; // 80% of hero height for better transition
       
-      console.log('Scroll Y:', window.scrollY, 'Threshold:', scrollThreshold);
+      console.log('Scroll Y:', window.scrollY, 'Threshold:', scrollThreshold, 'isScrolled:', isScrolled);
       
-      if (window.scrollY > scrollThreshold) { // 10% of hero height
+      if (window.scrollY > scrollThreshold) {
         console.log('Setting navbar to WHITE');
-        setIsScrolled(true); // White navbar
+        setIsScrolled(true); // White navbar when scrolled down
       } else {
         console.log('Setting navbar to BLACK');
-        setIsScrolled(false); // Black navbar
+        setIsScrolled(false); // Black navbar on hero section
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isScrolled]);
 
   // Handle window resize for responsive design
   React.useEffect(() => {
@@ -70,19 +70,20 @@ const Header = () => {
     <Navbar 
       collapseOnSelect 
       expand="lg" 
+      className={isScrolled ? 'navbar-scrolled' : 'navbar-default'}
       style={{
-        paddingTop: '15px',
-        paddingBottom: '15px',
-        backgroundColor: isScrolled ? 'rgba(255,255,255,0.95)' : 'rgba(0,0,0,0.85)',
-        backdropFilter: isScrolled ? 'blur(20px)' : 'blur(15px)',
-        boxShadow: isScrolled ? '0 4px 25px rgba(0,0,0,0.08)' : '0 4px 20px rgba(0,0,0,0.3)',
-        borderBottom: isScrolled ? '1px solid rgba(0,0,0,0.05)' : '1px solid rgba(255,255,255,0.1)',
-        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000
+        paddingTop: '15px !important',
+        paddingBottom: '15px !important',
+        backgroundColor: isScrolled ? 'rgba(255,255,255,0.95) !important' : 'rgba(0,0,0,0.85) !important',
+        backdropFilter: isScrolled ? 'blur(20px) !important' : 'blur(15px) !important',
+        boxShadow: isScrolled ? '0 4px 25px rgba(0,0,0,0.08) !important' : '0 4px 20px rgba(0,0,0,0.3) !important',
+        borderBottom: isScrolled ? '1px solid rgba(0,0,0,0.05) !important' : '1px solid rgba(255,255,255,0.1) !important',
+        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important',
+        position: 'fixed !important',
+        top: '0 !important',
+        left: '0 !important',
+        right: '0 !important',
+        zIndex: '1000 !important'
       }}
     >
       <Container>

@@ -15,8 +15,7 @@ import {
 } from "lucide-react";
 
 // Import real faculty photos
-import jituhod from "../../assets/images/faculty/jituhod.webp";
-import pksharma from "../../assets/images/faculty/pksharma.webp";
+import prafullaSharma from "../../assets/images/faculty/prafulla sharma .jpg";
 import nishikant from "../../assets/images/faculty/nishikant.webp";
 import pankajrai from "../../assets/images/faculty/pankajrai.webp";
 
@@ -41,30 +40,19 @@ const PatronageSection = () => {
     },
     {
       id: 2,
-      name: "Prof. Jitu Kujur",
-      position: "Professor",
-      institution: "Civil Engineering, BIT Sindri",
-      location: "Dhanbad, Jharkhand",
-      image: jituhod,
-      quote: "I extend heartfelt gratitude to the professors and students whose dedicated efforts and countless hours organizing activities have bestowed significance upon this association.",
-      rating: 5,
-      color: "from-emerald-600 via-teal-600 to-cyan-600"
-    },
-    {
-      id: 3,
-      name: "Prof. P.K Sharma",
+      name: "Prof. Prafulla Sharma",
       position: "Head of department",
       institution: "ACE BIT Sindri",
       location: "Dhanbad, Jharkhand",
-      image: pksharma,
+      image: prafullaSharma,
       quote: "I deeply appreciate the unwavering commitment of professors and students who dedicated countless hours to organizing activities.",
       rating: 5,
       color: "from-orange-600 via-amber-600 to-yellow-600"
     },
     {
-      id: 4,
+      id: 3,
       name: "Dr. Nishikant Kumar",
-      position: "Assistant Professor Incharge",
+      position: "Professor In-charge",
       institution: "ACE BIT Sindri",
       location: "Dhanbad, Jharkhand",
       image: nishikant,

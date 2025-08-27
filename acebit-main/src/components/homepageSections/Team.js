@@ -6,7 +6,6 @@ import {
   Star, 
   Linkedin, 
   Mail, 
-  Phone,
   Building,
   GraduationCap,
   Globe,
@@ -24,7 +23,7 @@ const Team = () => {
       name: "Prince Michael",
       role: "President",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      phone: "+91 6203112525",
+
       email: "president@acebitsindri.com",
       linkedin: "https://linkedin.com/in/prince-michael",
       color: "from-yellow-500 to-orange-500",
@@ -34,7 +33,7 @@ const Team = () => {
       name: "Prashant Malviya",
       role: "Faculty Incharge",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
-      phone: "+91 7505198506",
+
       email: "faculty@acebitsindri.com",
       linkedin: "https://linkedin.com/in/prashant-malviya",
       color: "from-blue-500 to-purple-500",
@@ -44,7 +43,7 @@ const Team = () => {
       name: "Rahul Kumar",
       role: "Vice President",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      phone: "+91 9876543210",
+
       email: "vicepresident@acebitsindri.com",
       linkedin: "https://linkedin.com/in/rahul-kumar",
       color: "from-green-500 to-emerald-500",
@@ -194,10 +193,6 @@ const Team = () => {
                   {/* Contact Info */}
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center text-slate-600">
-                      <Phone className="w-4 h-4 mr-3" />
-                      <span className="text-sm">{member.phone}</span>
-                    </div>
-                    <div className="flex items-center text-slate-600">
                       <Mail className="w-4 h-4 mr-3" />
                       <span className="text-sm">{member.email}</span>
                     </div>
@@ -219,12 +214,7 @@ const Team = () => {
                     >
                       <Mail className="w-5 h-5 text-white" />
                     </a>
-                    <a
-                      href={`tel:${member.phone}`}
-                      className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center hover:bg-green-600 transition-all duration-300 hover:scale-110"
-                    >
-                      <Phone className="w-5 h-5 text-white" />
-                    </a>
+
                   </div>
                 </div>
               </Col>

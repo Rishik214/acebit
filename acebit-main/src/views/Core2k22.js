@@ -6,7 +6,6 @@ import {
   Star, 
   Linkedin,
   Mail,
-  Phone,
   Heart,
   Target,
   TrendingUp,
@@ -58,296 +57,259 @@ const Core2k22 = () => {
       position: "Development Team",
       image: abhay,
       linkedin: "https://www.linkedin.com/in/abhay-kr-mahato-a7aa3a236/",
-      email: "abhay.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12400"
+      email: "abhay.kumar@bitsindri.ac.in"
     },
     {
       name: "Abhishek Thakur",
       position: "Social Media Team",
       image: abhishek,
       linkedin: "https://linkedin.com/in/abhishek-singh",
-      email: "abhishek.singh@bitsindri.ac.in",
-      phone: "+91-94311-12401"
+      email: "abhishek.singh@bitsindri.ac.in"
     },
     {
       name: "Abhinav Gourav",
       position: "Editorial Team",
       image: abhinav,
       linkedin: "https://linkedin.com/in/abhinav-kumar",
-      email: "abhinav.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12402"
+      email: "abhinav.kumar@bitsindri.ac.in"
     },
     {
       name: "Aryan Kumar",
       position: "Ideation Team",
       image: aryan,
       linkedin: "https://linkedin.com/in/aryan-sharma",
-      email: "aryan.sharma@bitsindri.ac.in",
-      phone: "+91-94311-12403"
+      email: "aryan.sharma@bitsindri.ac.in"
     },
     {
       name: "Jaydeep Kumar",
       position: "Ideation Team",
       image: chandan,
       linkedin: "https://linkedin.com/in/chandan-kumar",
-      email: "chandan.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12404"
+      email: "chandan.kumar@bitsindri.ac.in"
     },
     {
       name: "Deepak Verma",
       position: "Technical Head",
       image: deepak,
       linkedin: "https://linkedin.com/in/deepak-verma",
-      email: "deepak.verma@bitsindri.ac.in",
-      phone: "+91-94311-12405"
+      email: "deepak.verma@bitsindri.ac.in"
     },
     {
       name: "Deepak Patel",
       position: "Operational Team",
       image: deepakp,
       linkedin: "https://linkedin.com/in/deepak-patel",
-      email: "deepak.patel@bitsindri.ac.in",
-      phone: "+91-94311-12406"
+      email: "deepak.patel@bitsindri.ac.in"
     },
     {
       name: "Divyanshu Singh",
       position: "Operational Team",
       image: divyanshus,
       linkedin: "https://linkedin.com/in/divyanshu-singh",
-      email: "divyanshu.singh@bitsindri.ac.in",
-      phone: "+91-94311-12407"
+      email: "divyanshu.singh@bitsindri.ac.in"
     },
     {
       name: "Hritik Kumar",
       position: "Designing Team, Sports And Cultural Team",
       image: hritik,
       linkedin: "https://linkedin.com/in/hritik-kumar",
-      email: "hritik.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12408"
+      email: "hritik.kumar@bitsindri.ac.in"
     },
     {
       name: "Kuwar Singh",
       position: "Research & Project Application Team",
       image: kuwar,
       linkedin: "https://linkedin.com/in/kuwar-singh",
-      email: "kuwar.singh@bitsindri.ac.in",
-      phone: "+91-94311-12409"
+      email: "kuwar.singh@bitsindri.ac.in"
     },
     {
       name: "Muskan Kumari",
       position: "Counselling Team , Research & Project Application Team",
       image: muskan,
       linkedin: "https://linkedin.com/in/muskan-kumari",
-      email: "muskan.kumari@bitsindri.ac.in",
-      phone: "+91-94311-12410"
+      email: "muskan.kumari@bitsindri.ac.in"
     },
     {
       name: "Nitish Kumar",
       position: "Editorial Team",
       image: nitish,
       linkedin: "https://linkedin.com/in/nitish-kumar",
-      email: "nitish.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12411"
+      email: "nitish.kumar@bitsindri.ac.in"
     },
     {
       name: "Pradeep Kumar",
       position: "Designing Team",
       image: pradeep,
       linkedin: "https://linkedin.com/in/pradeep-kumar",
-      email: "pradeep.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12412"
+      email: "pradeep.kumar@bitsindri.ac.in"
     },
     {
       name: "Priyanshu Kumar",
       position: "Sports And Cultural Team",
       image: priyanshu,
       linkedin: "https://linkedin.com/in/priyanshu-kumar",
-      email: "priyanshu.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12413"
+      email: "priyanshu.kumar@bitsindri.ac.in"
     },
     {
       name: "Rahul Kalindi",
       position: "Development Team",
       image: rahulkali,
       linkedin: "https://linkedin.com/in/rahul-kalindi",
-      email: "rahul.kalindi@bitsindri.ac.in",
-      phone: "+91-94311-12414"
+      email: "rahul.kalindi@bitsindri.ac.in"
     },
     {
       name: "Riya Gupta",
       position: "Designing Team & Social Media Team",
       image: riyagupta,
       linkedin: "https://linkedin.com/in/riya-gupta",
-      email: "riya.gupta@bitsindri.ac.in",
-      phone: "+91-94311-12415"
+      email: "riya.gupta@bitsindri.ac.in"
     },
     {
       name: "Shipra Kumari",
       position: "Operational Team & Public Relations Team",
       image: shipra,
       linkedin: "https://linkedin.com/in/shipra-kumari",
-      email: "shipra.kumari@bitsindri.ac.in",
-      phone: "+91-94311-12416"
+      email: "shipra.kumari@bitsindri.ac.in"
     },
     {
       name: "Sumit Kumar",
       position: "Marketing Team",
       image: sumit,
       linkedin: "https://linkedin.com/in/sumit-kumar",
-      email: "sumit.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12417"
+      email: "sumit.kumar@bitsindri.ac.in"
     },
     {
       name: "Anjali Kumari",
       position: "Editorial Team",
       image: anjali,
       linkedin: "https://linkedin.com/in/anjali-kumari",
-      email: "anjali.kumari@bitsindri.ac.in",
-      phone: "+91-94311-12418"
+      email: "anjali.kumari@bitsindri.ac.in"
     },
     {
       name: "Divyanshu Kumar",
       position: "Counselling Team , Sponsorship Team",
       image: divyanshu,
       linkedin: "https://linkedin.com/in/divyanshu-kumar",
-      email: "divyanshu.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12419"
+      email: "divyanshu.kumar@bitsindri.ac.in"
     },
     {
       name: "Harshita Kumari",
       position: "Operational Team ,",
       image: harshita,
       linkedin: "https://linkedin.com/in/harshita-kumari",
-      email: "harshita.kumari@bitsindri.ac.in",
-      phone: "+91-94311-12420"
+      email: "harshita.kumari@bitsindri.ac.in"
     },
     {
       name: "Jaiprakash Kumar",
       position: "Designing Team",
       image: jaipraksh,
       linkedin: "https://linkedin.com/in/jaiprakash-kumar",
-      email: "jaiprakash.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12421"
+      email: "jaiprakash.kumar@bitsindri.ac.in"
     },
     {
       name: "Jaydeep Kumar",
       position: "Ideation Team",
       image: jaydeep,
       linkedin: "https://linkedin.com/in/jaydeep-kumar",
-      email: "jaydeep.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12422"
+      email: "jaydeep.kumar@bitsindri.ac.in"
     },
     {
       name: "Manish Kumar",
       position: "Designing Team",
       image: manish,
       linkedin: "https://linkedin.com/in/manish-kumar",
-      email: "manish.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12423"
+      email: "manish.kumar@bitsindri.ac.in"
     },
     {
       name: "Prince Kumar",
       position: "Research & Project Application Team",
       image: prince,
       linkedin: "https://linkedin.com/in/prince-kumar",
-      email: "prince.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12424"
+      email: "prince.kumar@bitsindri.ac.in"
     },
     {
       name: "Rahul Kumar",
       position: "Editorial Team",
       image: rahul,
       linkedin: "https://linkedin.com/in/rahul-kumar",
-      email: "rahul.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12425"
+      email: "rahul.kumar@bitsindri.ac.in"
     },
     {
       name: "Ravi Ranjan",
       position: "Editorial Team",
       image: raviranjan,
       linkedin: "https://linkedin.com/in/ravi-ranjan",
-      email: "ravi.ranjan@bitsindri.ac.in",
-      phone: "+91-94311-12426"
+      email: "ravi.ranjan@bitsindri.ac.in"
     },
     {
       name: "Shraban Kumar",
       position: "Editorial Team",
       image: shraban,
       linkedin: "https://linkedin.com/in/shraban-kumar",
-      email: "shraban.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12427"
+      email: "shraban.kumar@bitsindri.ac.in"
     },
     {
       name: "Shubham Patel",
       position: "Industrial Relation Team",
       image: shubham,
       linkedin: "https://linkedin.com/in/shubham-patel",
-      email: "shubham.patel@bitsindri.ac.in",
-      phone: "+91-94311-12428"
+      email: "shubham.patel@bitsindri.ac.in"
     },
     {
       name: "Sneha Kumari",
       position: "Marketing Team",
       image: sneha,
       linkedin: "https://linkedin.com/in/sneha-kumari",
-      email: "sneha.kumari@bitsindri.ac.in",
-      phone: "+91-94311-12429"
+      email: "sneha.kumari@bitsindri.ac.in"
     },
     {
       name: "Upen Kumar",
       position: "GATE-ESE Forum",
       image: upen,
       linkedin: "https://linkedin.com/in/upen-kumar",
-      email: "upen.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12430"
+      email: "upen.kumar@bitsindri.ac.in"
     },
     {
       name: "Rimil Hansda",
       position: "Sponsorship Team",
       image: rimil,
       linkedin: "https://linkedin.com/in/rimil-hansda",
-      email: "rimil.hansda@bitsindri.ac.in",
-      phone: "+91-94311-12431"
+      email: "rimil.hansda@bitsindri.ac.in"
     },
     {
       name: "Shubham Singh",
       position: "Industrial Relation Team",
       image: shubhams,
       linkedin: "https://linkedin.com/in/shubham-singh",
-      email: "shubham.singh@bitsindri.ac.in",
-      phone: "+91-94311-12432"
+      email: "shubham.singh@bitsindri.ac.in"
     },
     {
       name: "Priya Swami",
       position: "Public Relations Team",
       image: swami,
       linkedin: "https://linkedin.com/in/priya-swami",
-      email: "priya.swami@bitsindri.ac.in",
-      phone: "+91-94311-12433"
+      email: "priya.swami@bitsindri.ac.in"
     },
     {
       name: "Sushant Kumar",
       position: "GATE-ESE Forum,Marketing Team",
       image: sushant,
       linkedin: "https://linkedin.com/in/sushant-kumar",
-      email: "sushant.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12434"
+      email: "sushant.kumar@bitsindri.ac.in"
     },
     {
       name: "Sohel Khan",
       position: "Sports And Cultural Team",
       image: sohel,
       linkedin: "https://linkedin.com/in/sohel-khan",
-      email: "sohel.khan@bitsindri.ac.in",
-      phone: "+91-94311-12435"
+      email: "sohel.khan@bitsindri.ac.in"
     },
     {
       name: "Sahil Kumar",
       position: "Sponsorship Team",
       image: sahil,
       linkedin: "https://linkedin.com/in/sahil-kumar",
-      email: "sahil.kumar@bitsindri.ac.in",
-      phone: "+91-94311-12436"
+      email: "sahil.kumar@bitsindri.ac.in"
     }
   ];
 
@@ -461,8 +423,7 @@ const Core2k22 = () => {
                         <span className="truncate">{member.email}</span>
                       </div>
                       <div className="flex items-center justify-center text-slate-500 text-sm">
-                        <Phone className="w-4 h-4 mr-2" />
-                        <span>{member.phone}</span>
+                        
                       </div>
                     </div>
 
