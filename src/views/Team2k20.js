@@ -146,7 +146,7 @@ const Team2k20 = () => {
       phone: "+91-94311-12396"
     },
     {
-      name: "Professional Head",
+      name: "Abhimanyu Kumar",
       position: "Professional Head",
       image: pro,
       linkedin: "https://www.linkedin.com/in/",
@@ -154,8 +154,8 @@ const Team2k20 = () => {
       phone: "+91-94311-12397"
     },
     {
-      name: "Social Head",
-      position: "Social Head",
+      name: "Hritam Swami",
+      position: "Sports Head",
       image: sh,
       linkedin: "https://www.linkedin.com/in/",
       email: "social@bitsindri.ac.in",
