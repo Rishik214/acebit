@@ -87,9 +87,9 @@ const Footer = () => {
     },
     { 
       icon: Phone, 
-      text: "+91 6203112525 (President)", 
+      text: "+91 97980 53452  (President)", 
       color: "from-green-500 to-emerald-500",
-      link: "tel:+916203112525"
+      link: "tel:+919798053452"
     },
     { 
       icon: Phone, 

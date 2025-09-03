@@ -63,8 +63,8 @@ const ContactForm = () => {
   const teamInfo = [
     {
       role: "President",
-      name: "Prince Michael",
-      phone: "+91 6203112525",
+      name: "Manish Kumar Mahato",
+      phone: "+91 97980 53452",
       color: "from-yellow-500 to-orange-500"
     },
     {

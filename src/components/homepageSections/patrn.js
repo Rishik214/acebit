@@ -11,7 +11,8 @@ import {
   GraduationCap,
   Building,
   Target,
-  Zap
+  Zap,
+  Dot
 } from "lucide-react";
 
 // Import real faculty photos
@@ -20,7 +21,7 @@ import pksharma from "../../assets/images/faculty/pksharma.webp";
 import prashantmalvia from "../../assets/images/faculty/prashantmalvia.webp";
 import pankajrai from "../../assets/images/faculty/pankajrai.webp";
 import nishikant from "../../assets/images/faculty/nishikant.webp";
-
+import nishikantsir from "../../assets/images/faculty/nishikantsir.jpg"
 const PatronageSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -46,7 +47,7 @@ const PatronageSection = () => {
       position: "Professor",
       institution: "Civil Engineering, BIT Sindri",
       location: "Dhanbad, Jharkhand",
-      image: nishikant,
+      image: nishikantsir,
       quote: "I extend heartfelt gratitude to the professors and students whose dedicated efforts and countless hours organizing activities have bestowed significance upon this association.",
       rating: 5,
       color: "from-emerald-600 via-teal-600 to-cyan-600"
@@ -308,7 +309,7 @@ const PatronageSection = () => {
                       {/* Rating Stars */}
                       <div className="flex justify-center lg:justify-start mt-4 sm:mt-6">
                         {[...Array(currentPatron.rating)].map((_, index) => (
-                          <Star key={index} className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-yellow-400 fill-current animate-pulse" style={{animationDelay: `${index * 0.1}s`}} />
+                          <Dot key={index} className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-yellow-400 fill-current animate-pulse" style={{animationDelay: `${index * 0.1}s`}} />
                         ))}
                       </div>
                     </div>

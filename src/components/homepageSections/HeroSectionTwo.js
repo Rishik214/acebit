@@ -91,7 +91,7 @@ const HeroSectionTwo = () => {
               </h2>
               
               <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed mb-6 sm:mb-8">
-                Join the premier student organization that's shaping the future of civil engineering 
+                Join the premier students organization that's shaping the future of civil engineering 
                 through innovation, collaboration, and hands-on learning experiences.
               </p>
 

@@ -358,7 +358,7 @@ function App() {
     },
     {
       name: "Shubham Kumar Singh",
-      img: shubham,
+      img: shubhams,
       review: "Public Relation Officer",
       url: "#"
     },
